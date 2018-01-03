@@ -99,4 +99,42 @@
   - 清单列表（- [x] \(option) content） 
   
 
+1/3/2018 3:01:37 PM 
+- **函数的重载**  函数重新加载方法体
+    - 两个函数的函数体方法不变
+    - 两个函数的名字一致
+    - 两个函数的变量数据类型不一样
 
+**原函数:**
+```c#
+static int Plus(params int[] array){
+            int sum=0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum +=array[i];
+            }
+            return sum;
+        }
+
+```
+
+**重载的函数:**
+```c#
+static double Plus(params double[] array){
+            double sum=0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum +=array[i];
+            }
+            return sum;
+        }
+```
+**调用函数:**
+```c#
+ static void Main(string[] args)
+        {
+            int sum=Plus(45,52,45,24,52);
+            double sum2=Plus(45.2,45,2,2.3);
+            Console.Write(sum+"\n"+sum2);
+        }
+```
