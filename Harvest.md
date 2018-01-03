@@ -138,3 +138,86 @@ static double Plus(params double[] array){
             Console.Write(sum+"\n"+sum2);
         }
 ```
+
+- **委托**将函数方法作为委托对象的个个变量，供委托对象接受其方法，使用。
+
+```c#
+namespace appdd
+{
+//定义委托
+ public delegate float haha(float a,float b);
+    class Program
+    {
+//自定义函数方法
+        static float Plus(float a,float b){
+            
+            return a+b;
+        }
+//自定义函数方法
+        static float MUti(params float[] array){//函数的方法的返回值数据类型需要和委托的参数值表的数据类型一致
+            float sum=0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum *=array[i];
+            }
+
+            return sum;
+        }
+
+        static void Main(string[] args)
+        {
+//声明委托
+          haha df;
+
+          df=Plus;//将Plus方法赋值给df委托对象
+
+        }
+    }
+}
+```
+
+## 2018/1/4 10:19:58
+- 写日志
+- css3,liner gradial 
+
+
+## 2018/1/5 10:15:22 
+- 函数的递归调用过程，实质是对自身的镶套关系，，先不断往下镶套，直到遇到终止条件时，在每镶套一次都会开辟一块新的存储空间，才能从死循环中解放出来，再逐层返回值；
+
+## 2018/1/6 20:55:52
+- css3过度案列 translation
+
+## 2018/1/8 11:37:51 
+- C++编程第一章编程练习
+- CSS-transform
+  -  居中应用：translate(),scale()
+  -  skew()倾斜
+  -  百分比都是根据当前的半径进行取值运算的
+  -  都是围绕中心点
+- width的auto和percentage两种情况赋值
+- Hight的auto和percentage两种情况赋值
+- MixWidth是对width取auto值时的最大宽度限制
+- Minwidth是对Mixth的最小宽度限制
+- border-radius()的理解
+  - 当为4px/4px，相当于以4为半径正圆
+  - 当为6px/4px,相当于以长轴半径为6，短轴半径为4的椭圆
+  - 第一个参数代表水平方向，第二个是垂直方向
+- C#输出调试 
+
+## 2018/1/9 12:09:29
+- C#断点调试 
+
+## 2018/1/14 14:59:37
+- try,catch,finally调试
+  - try块内只要有一行代码有错误，都不继续往下读取
+  - catch不带参数时，会获取try块中可能出现所有错误类型相对应
+  - finally,无论catch怎么样，里面的代码都会被执行 
+- 类的声明与定义
+  - private 定义私有成员，不如许对象化后被调用
+  - 对于私有的成员变量，应定义方法，给予赋值，this，在类方法中指向的是类的对象化实体
+- 重载（ 重新加载函数体，函数方法名一样，但参数不同）
+- 构造函数
+  - 没有数据类型
+  - 对类被调用时的初始化，new是系统的默认初始化，不带参数
+  - 自定义构造函数，函数名需要和类名一致
+  - 可以定义多个构造函数（实质是函数的重载）    
